@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 
 import "./directory.scss";
 
 import MenuItem from "../menu-item/menu-item";
 
 const Directory = () => {
-  const [sections, useSections] = useState([
+  const sections = [
     {
       title: "hats",
       imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
@@ -38,7 +38,7 @@ const Directory = () => {
       id: 5,
       linkUrl: "shop/mens",
     },
-  ]);
+  ];
 
   return (
     <div className="directory-menu">
