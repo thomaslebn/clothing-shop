@@ -15,7 +15,7 @@ const SignIn = () => {
     e.preventDefault();
 
     try {
-      await auth.signInWithEmailAndPassword(email, password);
+      await auth.signInWithEmailAndPassword(email.trim(), password);
 
       setEmail("");
       setPassword("");
@@ -28,7 +28,7 @@ const SignIn = () => {
     const { value, name } = e.target;
     if (name === "email") {
       setEmail(value);
-    } else {
+    } else if (name === "password") {
       setPassword(value);
     }
   };
@@ -46,6 +46,7 @@ const SignIn = () => {
           value={email}
           onChange={handleChange}
           label="email"
+          required
         />
         <FormInput
           type="password"
@@ -54,6 +55,7 @@ const SignIn = () => {
           value={password}
           onChange={handleChange}
           label="password"
+          required
         />
 
         <div className="buttons">
