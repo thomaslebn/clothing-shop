@@ -1,5 +1,4 @@
 import React from "react";
-
 import { connect } from "react-redux";
 
 import {
@@ -12,7 +11,6 @@ import "./checkout-item.scss";
 
 const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
   const { name, imageUrl, price, quantity } = cartItem;
-
   return (
     <div className="checkout-item">
       <div className="image-container">
