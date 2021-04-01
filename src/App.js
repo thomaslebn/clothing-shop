@@ -36,7 +36,7 @@ function App(props) {
         unsubscribeFromAuth();
       };
     });
-  }, [props]);
+  }, []);
 
   return (
     <div>
