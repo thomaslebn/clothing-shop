@@ -1,19 +1,10 @@
 import React from "react";
 
-import { connect } from "react-redux";
+import CollectionsOverview from "../../components/collections-overview/collections-overview";
 
-import CollectionPreview from "../../components/collection-preview/collection-preview";
-
-const ShopPage = ({ collections }) => (
+const ShopPage = () => (
   <div className="shop-page">
-    {collections.map(({ id, ...otherCollectionsProps }) => (
-      <CollectionPreview key={id} {...otherCollectionsProps} />
-    ))}
+    <CollectionsOverview />
   </div>
 );
-
-const mapStateToProps = ({ shop: { collections } }) => ({
-  collections,
-});
-
-export default connect(mapStateToProps)(ShopPage);
+export default ShopPage;
