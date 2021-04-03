@@ -16,10 +16,9 @@ import SignInSignUp from "./pages/sign-in-sign-up/sign-in-sign-up";
 import CheckoutPage from "./pages/checkout/checkout";
 
 function App(props) {
+  const { setCurrentUser } = props;
   useEffect(() => {
     let unsubscribeFromAuth = null;
-
-    const { setCurrentUser } = props;
 
     unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth) {
@@ -39,7 +38,7 @@ function App(props) {
         unsubscribeFromAuth();
       };
     });
-  }, []);
+  }, [setCurrentUser]);
 
   return (
     <div>
