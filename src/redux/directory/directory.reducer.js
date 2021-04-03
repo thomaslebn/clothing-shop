@@ -35,6 +35,6 @@ const INITIAL_STATE = {
   ],
 };
 
-const directoryReducer = (state = INITIAL_STATE) => state;
+const directoyReducer = (state = INITIAL_STATE) => state;
 
-export default directoryReducer;
+export default directoyReducer;
